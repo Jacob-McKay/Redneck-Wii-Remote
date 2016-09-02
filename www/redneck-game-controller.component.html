@@ -1,0 +1,14 @@
+<h3>You are INSIDE the controller... trippy huh?</h3>
+
+<h5>Current Reading:</h5>
+<ul>
+  <li>x: {{$ctrl.currentSomething.x}}</li>
+  <li>y: {{$ctrl.currentSomething.y}}</li>
+  <li>z: {{$ctrl.currentSomething.z}}</li>
+  <li>timestamp: {{$ctrl.currentSomething.timestamp}}</li>
+</ul>
+
+<h5>Data Received From Websocket:</h5>
+<ul ng-repeat="data in $ctrl.collection" >
+  <li> {{ data }} </li>
+</ul>
