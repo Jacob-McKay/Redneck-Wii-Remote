@@ -11,6 +11,8 @@ function RedneckGameControllerController($deviceGyroscope, /*$websocket,*/ $inte
   ctrl.datastream;
   ctrl.$onInit = function() {
 
+
+    //Scan QR code to get room and server details
     //socket.io way
     ctrl.datastream = io('ws://192.168.0.9:3000');
     ctrl.datastream.on('chat message', function(msg){
@@ -63,7 +65,7 @@ function RedneckGameControllerController($deviceGyroscope, /*$websocket,*/ $inte
           }).catch(function(error){
             console.log("something is fucked with the gyroscope (getCurrent): ", error);
           });
-        }, 500);
+        }, 100);
 
       }, false);
 
